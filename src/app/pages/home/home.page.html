@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Mis datos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+          <ion-img style="width: 100%; height: 100%;" src="/assets/images/foto.jpg"></ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-list>
+            <ion-item>Nombre: {{datos.nombre}}</ion-item>
+            <ion-item>Apellido: {{datos.apellido}}</ion-item>
+            <ion-item>Correo: {{datos.correo}}</ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

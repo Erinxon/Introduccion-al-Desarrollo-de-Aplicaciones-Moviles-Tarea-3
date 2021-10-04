@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Traductor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-row [formGroup]="form">
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">Ingrese un número</ion-label>
+            <ion-input type="number" formControlName="numero" ></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-button (click)="transformNumberIntoLetter()" [disabled]="form.invalid" color="primary" expand="block" >Sumar</ion-button>
+        </ion-col>
+        <ion-col size="12" *ngIf="textNumber">
+          <ion-item>
+            <ion-badge color="tertiary" style="padding: 0.5em;">{{textNumber}}</ion-badge>
+          </ion-item>
+        </ion-col>
+      </ion-row> 
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
